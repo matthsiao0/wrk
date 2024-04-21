@@ -1,0 +1,7 @@
+services:
+  k6:
+    image: grafana/k6
+    volumes: 
+    - ./scripts/todoitem:/scripts
+    entrypoint: ["k6"]
+    command: ["run", "/scripts/put_todoitem.js"]
